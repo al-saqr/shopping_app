@@ -1,14 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_app/screens/home_screen.dart';
 
-void main() => runApp(App());
+void void main(List<String> args) {
+  runApp(const App());
+}
 
 class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Zender',
-      initialRoute: 'Loading...',
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        primarySwatch: Colors.blue,
+        fontFamily: "Gordita",
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
+        textTheme: const TextTheme(
+          bodyText2: TextStyle(color: Colors.black54),
+        ),
+      ),
+      home: const HomeScreen(),
     );
   }
 }
