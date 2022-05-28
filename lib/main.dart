@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_app/screens/home_screen.dart';
 
-void void main(List<String> args) {
+void main(List<String> args) {
   runApp(const App());
 }
 
