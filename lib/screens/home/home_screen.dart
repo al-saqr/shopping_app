@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'components/categories.dart';
+import 'components/new_products.dart';
+import 'components/popular_products.dart';
 import 'components/search_form.dart';
 
 class HomeScreen extends StatelessWidget {
