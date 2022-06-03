@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_app/models/product.dart';
 
+import '../../details/components/details_screen.dart';
 import 'product_card.dart';
 import 'section_title.dart';
 
@@ -24,24 +25,23 @@ class NewProducts extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: List.generate(
-              demo_product.length,
-              (index) => Padding(
-                padding: const EdgeInsets.only(right: 16.0),
-                child: ProductCard(
-                  title: demo_product[index].title,
-                  image: demo_product[index].image,
-                  price: demo_product[index].price,
-                  backgroundColor: demo_product[index].bgcolor,
-                  press: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                        DetailsScreen(product: demo_product[indext]))
-                    )
-                  },
-                ),
-              )),
+                demo_product.length,
+                (index) => Padding(
+                      padding: const EdgeInsets.only(right: 16.0),
+                      child: ProductCard(
+                        title: demo_product[index].title,
+                        image: demo_product[index].image,
+                        price: demo_product[index].price,
+                        backgroundColor: demo_product[index].backgroundcolor,
+                        press: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DetailsScreen(
+                                      product: demo_product[index])));
+                        },
+                      ),
+                    )),
           ),
         ),
       ],

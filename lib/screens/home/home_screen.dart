@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../contants.dart';
 import 'components/categories.dart';
 import 'components/new_products.dart';
 import 'components/popular_products.dart';
@@ -37,12 +38,12 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(
             parent: AlwaysScrollableScrollPhysics()),
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(CustomSizes.defaultPadding),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Techno",
+              "Kimchi",
               style: Theme.of(context)
                   .textTheme
                   .headline4!

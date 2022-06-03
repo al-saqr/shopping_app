@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../contants.dart';
+
 class ColorDot extends StatelessWidget {
   const ColorDot({
     Key? key,
@@ -12,11 +14,11 @@ class ColorDot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const primaryColor = Color(0xFFF67952);
     return Container(
       padding: const EdgeInsets.all(4.0),
       decoration: BoxDecoration(
-        border: Border.all(color: isActive ? primaryColor : Colors.transparent),
+        border: Border.all(
+            color: isActive ? CustomColors.primaryColor : Colors.transparent),
         shape: BoxShape.circle,
       ),
       child: CircleAvatar(
